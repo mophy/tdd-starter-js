@@ -1,0 +1,44 @@
+{
+  "name": "tdd-starter-js",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "lint": "eslint main/** && eslint test/**"
+  },
+  "author": "mophy.xh@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@types/jest": "^24.0.6",
+    "babel-jest": "^24.5.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "expect-more-jest": "^2.4.1",
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/node_modules/expect-more-jest"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testMatch": [
+      "**/?(*.)(spec|test).?(m)js?(x)"
+    ],
+    "collectCoverageFrom": [
+      "main/*.js"
+    ]
+  }
+}
